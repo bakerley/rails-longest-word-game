@@ -1,0 +1,12 @@
+<h1>Result</h1>
+<p>
+  <%if @answer = 3%>
+  Sorry but <strong><%= @user_input%></strong> can't be built out of <%= @grid%>
+  <%elsif @answer = 2%>
+  Sorry but <strong><%= @user_input%></strong> does not seems to be an english word
+  <%else%>
+  <strong>Congratulations!</strong><%= @user_input%> is a valid english word
+  <% end %>
+</p>
+
+<%= link_to "Try again", new_path %>
